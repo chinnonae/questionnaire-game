@@ -1,7 +1,7 @@
 let question = []
 let game = {}
 
-$.get('/questions.json', function (data) {
+$.get('questions.json', function (data) {
   question = data
 })
 

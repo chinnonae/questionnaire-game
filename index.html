@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Exercise</title>
+
+  <script src="lib/jquery-3.3.1.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page active" id="start">
+    <h1>Choose the number of questions</h1>
+    <button onclick="startGame(5)">5 Questions</button>
+    <button onclick="startGame(10)">10 Questions</button>
+    <button onclick="startGame(15)">15 Questions</button>
+  </div>
+  <div class="page" id="game">
+    <h1 id="question">Question</h1>
+    <button id="choice:1" onclick="answer(0)">Choice 1</button>
+    <button id="choice:2" onclick="answer(1)">Choice 2</button>
+    <button id="choice:3" onclick="answer(2)">Choice 3</button>
+    <button id="choice:4" onclick="answer(3)">Choice 4</button>
+    <h2 class="score">0</h2>
+  </div>
+  <div class="page" id="end">
+    <h1 class="score">0</h1>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+</body>
+</html>

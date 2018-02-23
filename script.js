@@ -63,7 +63,8 @@ function Game (numQuestion) {
 Game.prototype.nextQuestion = function () {
   if (this.numQuestion <= 0) return null
 
-  let random = randomInt(this.numQuestion--)
+  this.numQuestion -= 1
+  let random = randomInt(this.question.length)
   this.currentQuestion = this.question[random]
 
   this.question.splice(random, 1)

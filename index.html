@@ -7,27 +7,36 @@
   <title>Javascript Exercise</title>
 
   <script src="lib/jquery-3.3.1.js"></script>
+  <!-- <script src="lib/jquery.color-2.1.2.js"></script> -->
+  <script src="lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page active" id="start">
     <h1>Choose the number of questions</h1>
-    <button onclick="startGame(5)">5 Questions</button>
-    <button onclick="startGame(10)">10 Questions</button>
-    <button onclick="startGame(15)">15 Questions</button>
+    <button class="choice" onclick="startGame(1)">5 Questions</button>
+    <button class="choice" onclick="startGame(10)">10 Questions</button>
+    <button class="choice" onclick="startGame(15)">15 Questions</button>
   </div>
   <div class="page" id="game">
+    <div class="score-board">
+      <h2>Score</h2>
+      <h1 class="score-value">0</h1>
+    </div>
     <h1 id="question">Question</h1>
-    <button id="choice:1" onclick="answer(0)">Choice 1</button>
-    <button id="choice:2" onclick="answer(1)">Choice 2</button>
-    <button id="choice:3" onclick="answer(2)">Choice 3</button>
-    <button id="choice:4" onclick="answer(3)">Choice 4</button>
-    <h2 class="score">0</h2>
+    <button class="choice answer" id="choice:0" onclick="answer(0)">Choice 1</button>
+    <button class="choice answer" id="choice:1" onclick="answer(1)">Choice 2</button>
+    <button class="choice answer" id="choice:2" onclick="answer(2)">Choice 3</button>
+    <button class="choice answer" id="choice:3" onclick="answer(3)">Choice 4</button>
+    <div class="progress-bar">
+      <div class="progress-bar-value"></div>
+    </div>
   </div>
   <div class="page" id="end">
-    <h1 class="score">0</h1>
-    <button onclick="restartGame()">Restart</button>
+    <h1>Your score is</h1>
+    <h1 class="score-value">0</h1>
+    <button class="choice" id="retry_btn" onclick="restartGame()">Retry?</button>
   </div>
 </body>
 </html>
